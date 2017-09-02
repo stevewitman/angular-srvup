@@ -1,9 +1,9 @@
-<h2>{{ title }}</h2>
+<h2>{{ title }} - {{ todayDate | date: "MM/dd/yy"}}</h2>
 <hr>
 <div *ngFor="let item of videoList">
   <a href="videos/{{ item.slug }}">{{ item.name }}</a>
   <div *ngIf="item.embed">
-    <iframe width="560" height="315" [src]="getEmbedUrl(item)" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" [src]="getEmbedUrl(item) | safe" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
