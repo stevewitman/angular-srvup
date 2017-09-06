@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app.routing'
 
@@ -12,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { SafePipe } from './utility/safe.pipe';
 import { VideoDetailComponent } from './video-detail/video-detail.component';
 import { VideoListComponent } from './video-list/video-list.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -20,12 +22,14 @@ import { VideoListComponent } from './video-list/video-list.component';
     VideoListComponent,
     VideoDetailComponent,
     SafePipe,
-    HomeComponent
+    HomeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpModule,
+    FormsModule,
     BsDropdownModule.forRoot(),
     CarouselModule.forRoot()
   ],
