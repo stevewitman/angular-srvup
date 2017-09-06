@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app.routing'
 
@@ -24,6 +25,7 @@ import { VideoListComponent } from './video-list/video-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpModule,
     BsDropdownModule.forRoot(),
     CarouselModule.forRoot()
   ],
