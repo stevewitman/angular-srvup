@@ -24,7 +24,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.req = this.http.get('assets/json/videos.json').subscribe(data => {
-      console.log(data.json())
       data.json().filter(item => {
         if (item.featured) {
           this.homeImageList.push(item);
