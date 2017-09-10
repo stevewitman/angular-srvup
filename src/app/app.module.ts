@@ -15,6 +15,7 @@ import { SafePipe } from './utility/safe.pipe';
 import { VideoDetailComponent } from './video-detail/video-detail.component';
 import { VideoListComponent } from './video-list/video-list.component';
 import { SearchComponent } from './search/search.component';
+import { SearchDetailComponent } from './search-detail/search-detail.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { SearchComponent } from './search/search.component';
     VideoDetailComponent,
     SafePipe,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    SearchDetailComponent
   ],
   imports: [
     BrowserModule,
