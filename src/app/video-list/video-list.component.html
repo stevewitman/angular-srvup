@@ -1,7 +1,7 @@
 <h2>{{ title }}</h2>
 <hr>
 <div *ngFor="let item of videoList">
-  <h2><a href="videos/{{ item.slug }}">{{ item.name }}</a></h2>
+  <h2><a routerLink="/videos/{{ item.slug }}" routerLinkActive = "active">{{ item.name }}</a></h2>
   <div *ngIf="item.embed">
     <iframe width="560" height="315" [src]="getEmbedUrl(item) | safe" frameborder="0" allowfullscreen></iframe>
   </div>
