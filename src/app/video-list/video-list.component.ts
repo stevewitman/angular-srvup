@@ -10,13 +10,12 @@ import { VideoService } from '../videos/videos.service';
 export class VideoListComponent implements OnInit {
   private req: any;
   title = "Video List"
-  todayDate;
+  // todayDate;
   videoList: [any];
 
   constructor(private _video: VideoService) { }
 
   ngOnInit() {
-    this.todayDate = new Date();
     this.req = this._video.list().subscribe(data => {
       this.videoList = data as [any];
     })

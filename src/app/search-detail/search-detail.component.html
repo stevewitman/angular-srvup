@@ -2,3 +2,10 @@
 <p *ngIf="query">
   Searched for <b>{{ query }}</b>
 </p>
+<div *ngFor="let item of videoList">
+    <h2><a href="videos/{{ item.slug }}">{{ item.name }}</a></h2>
+    <div *ngIf="item.embed">
+      <iframe width="560" height="315" [src]="getEmbedUrl(item) | safe" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <hr>
+  </div>
