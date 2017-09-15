@@ -1,6 +1,15 @@
 <div class="row">
   <div class="col-sm-12">
     <carousel class="text-center" *ngIf='homeImageList'>
+      <slide>
+        <a routerLink="/videos/" routerLinkActive = "active">
+          <img class="img-main-carousel" [src]="videoListDefaultImage" alt="First slide">
+        </a>
+        <div class="carousel-caption">
+          <h3>Video List</h3>
+          <p><a class="btn btn-primary" routerLink="/videos/" routerLinkActive = "active">View Videos</a></p>
+        </div >
+      </slide>
       <slide *ngFor="let imageObj of homeImageList">
         <a routerLink="/videos/{{ imageObj.slug }}" routerLinkActive = "active">
           <img class="img-main-carousel" [src]="imageObj.image" alt="First slide">
@@ -10,56 +19,6 @@
           <p><a class="btn btn-default" routerLink="/videos/{{ imageObj.slug }}" routerLinkActive = "active">View</a></p>
         </div >
       </slide>
-      <!-- <slide>
-        <a #imageTwo href="/videos/video-2" (click)="preventNormal($event, imageTwo)">
-          <img class="img-main-carousel" src="assets/images/nature/2.jpg" alt="Second slide">
-        </a>
-        <div class="carousel-caption">
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <p><a class="btn btn-default" href="/videos/video-2">Video 2</a></p>
-        </div>
-      </slide>
-      <slide>
-        <a #imageThree href="/videos/video-3" (click)="preventNormal($event, imageThree)">
-          <img class="img-main-carousel" src="assets/images/nature/3.jpg" alt="Third slide">
-        </a>
-        <div class="carousel-caption">
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          <p><a class="btn btn-default" href="/videos/video-3">Video 3</a></p>
-        </div>
-      </slide>
-      <slide>
-        <a #imageFour href="/videos/video-4" (click)="preventNormal($event, imageFour)">
-          <img class="img-main-carousel" src="assets/images/nature/4.jpg" alt="Fourth slide">
-        </a>
-        <div class="carousel-caption">
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          <p><a class="btn btn-default" href="/videos/video-4">Video 4</a></p>
-        </div>
-      </slide>
-      <slide>
-        <a #imageFive href="/videos/video-5" (click)="preventNormal($event, imageFive)">
-          <img class="img-main-carousel" src="assets/images/nature/5.jpg" alt="Fifth slide">
-        </a>
-        <div class="carousel-caption">
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <p><a class="btn btn-default" href="/videos/video-5">Video 5</a></p>
-        </div>
-      </slide>
-      <slide>
-        <a #imageSix href="/videos/video-6" (click)="preventNormal($event, imageSix)">
-          <img class="img-main-carousel" src="assets/images/nature/6.jpg" alt="Sixth slide">
-        </a>
-        <div class="carousel-caption">
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          <p><a class="btn btn-default" href="/videos/video-6">Video 6</a></p>
-        </div>
-      </slide> -->
     </carousel>
   </div>
 </div>

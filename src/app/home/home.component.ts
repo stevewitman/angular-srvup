@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   private req: any;
 
   homeImageList: [VideoItem] = [] as [VideoItem]
+  videoListDefaultImage = 'assets/images/videos/0.png'
 
   constructor(private http: Http, private router: Router, private _video: VideoService) { }
 
